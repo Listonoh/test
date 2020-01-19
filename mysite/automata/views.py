@@ -14,6 +14,14 @@ class InputForm(forms.Form):
     text = forms.CharField(label='Post:', max_length=2000, 
                                    widget=forms.Textarea(attrs={'rows':'10', 'cols': '50'}))
 
+class InputAutomata(forms.Form):
+    text = forms.CharField(label='Post:', max_length=2000, 
+                                   widget=forms.Textarea(attrs={'rows':'10', 'cols': '50'}))
+
+class InputWord(forms.Form):
+    word = forms.CharField()
+
+
 def result(request, text):
     a =text 
     return render(request, 'automata/result.html', {"automaton_result" : a})
@@ -22,8 +30,15 @@ def index(request):
     a = "something"
     return render(request, 'automata/result.html', {"automaton_result" : a})
 
+def blankAutomata(request):
+    error = False
+    form = InputForm()
+    if 'error' in request.GET:
+        error = True
+    return render(request, 'automata/input.html', {'form': form, 'error': error})
+
+
 def input(request):
-    submitted = False
     if request.method == 'POST':
         form = InputForm(request.POST)
         if form.is_valid():
@@ -31,12 +46,8 @@ def input(request):
             word = cd['word']
             au = aut.Automaton()
             au.definition = json.loads(cd['text'])
-            # assert False
             return result(request, au.iterate_text(word))
     else:
-        form = InputForm()
-        if 'submitted' in request.GET:
-            submitted = True
-        return render(request, 'automata/input.html', {'form': form, 'submitted': submitted})
-
+        return blankAutomata(request)
+        
 
