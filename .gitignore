@@ -1,0 +1,15 @@
+mysite/Autom/__pycache__/__init__.cpython-36.pyc
+mysite/Autom/__pycache__/automata.cpython-36.pyc
+mysite/automata/__pycache__/__init__.cpython-36.pyc
+mysite/automata/__pycache__/admin.cpython-36.pyc
+mysite/automata/__pycache__/apps.cpython-36.pyc
+mysite/automata/__pycache__/models.cpython-36.pyc
+mysite/automata/__pycache__/textIn.cpython-36.pyc
+mysite/automata/__pycache__/urls.cpython-36.pyc
+mysite/automata/__pycache__/views.cpython-36.pyc
+mysite/automata/migrations/__pycache__/__init__.cpython-36.pyc
+mysite/mysite/__pycache__/__init__.cpython-36.pyc
+mysite/mysite/__pycache__/settings.cpython-36.pyc
+mysite/mysite/__pycache__/urls.cpython-36.pyc
+mysite/mysite/__pycache__/wsgi.cpython-36.pyc
+*.pyc
