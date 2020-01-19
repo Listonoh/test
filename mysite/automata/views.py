@@ -37,6 +37,6 @@ def input(request):
         form = InputForm()
         if 'submitted' in request.GET:
             submitted = True
-            return render(request, 'automata/input.html', {'form': form, 'submitted': submitted})
+        return render(request, 'automata/input.html', {'form': form, 'submitted': submitted})
 
 
