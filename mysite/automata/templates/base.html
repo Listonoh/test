@@ -15,9 +15,9 @@
 				<div class="col-sm-2">
 					{% block sidebar %}
 					<ul class="sidebar-nav">
-						<li><a href="{% url 'index' %}">Home</a></li>
-						<li><a href="">New automata</a></li>
-						<li><a href="">Saved Automata</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'input' %}">New automata</a></li>
+						<li><a href="{% url 'index' %}">Saved Automata</a></li>
 					</ul>
 					{% endblock %}
 				</div>
