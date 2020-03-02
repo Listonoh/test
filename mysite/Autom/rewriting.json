@@ -5,7 +5,7 @@
 	"name": "test rewriting",
 	"type": "Rewriting",
 	"doc_string" : "testing rewriting and window size 2",
-	"instructions" :
+	"tr_function" :
 	{
 		"st0": {
             "['0', '0']": [["st0","['1']"]],

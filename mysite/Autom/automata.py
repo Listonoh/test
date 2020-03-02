@@ -243,3 +243,7 @@ class Automaton:
                 if len(self.definition["tr_function"][state][value]) > 1:
                     return False
         return True
+
+a = Automaton("rewriting.json")
+print(a.iterate_text("0001"))
+

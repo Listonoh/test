@@ -24,9 +24,7 @@ def result(request):
     defin = request.POST["automata"]
     a = aut.Automaton()
     a.definition = json.loads(defin)
-    correct = False
-    if a.iterate_text(text):
-        correct = True
+    correct = a.iterate_text(text):
     return Automata(request, False, True, True, json.dumps(a.definition), correct)
 
 def index(request):
